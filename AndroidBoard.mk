@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2012 The SuperTeam Developer Group
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# AndroidBoard.mk is a legacy mechanism to deal with a few
-# edge-cases that can't be managed otherwise. No new rules
-# should be added to this file.
-#
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/team_passion.mk
 
-# Least specific includes go first, so that they can get
-# overridden further down
-
-# include rules from the generic passion board
-include device/htc/passion-common/AndroidBoardCommon.mk
-
-# include the non-open-source counterpart to this file
--include vendor/htc/passion/AndroidBoardVendor.mk
