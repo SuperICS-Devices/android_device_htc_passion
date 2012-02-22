@@ -4,18 +4,7 @@ $(call inherit-product, vendor/SuperTeam/products/flash.mk)
 
 $(call inherit-product, vendor/SuperTeam/products/hdpi.mk)
 
-
-# Inherit AOSP device configuration for passion.
-$(call inherit-product, device/htc/passion/full_passion.mk)
-
 $(call inherit-product, device/htc/passion/passion.mk)
-
-# Inherit some common stuff.
-$(call inherit-product, vendor/SuperTeam/products/common_full.mk)
-
-
-# Broadcom FM
-$(call inherit-product, vendor/SuperTeam/products/bcm_fm_radio.mk)
 
 #
 # Setup device specific product configuration.
@@ -40,35 +29,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.managed.roaming=1 \
     ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995 \
     ro.ril.emc.mode=2
-
-PRODUCT_PACKAGES += \
-   Launcher2 \
-   DSPManager \
-   hcitool \
-   FM \
-   Torch
-
-#
-# Set ro.modversion
-#
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.data.on=0 \
-    ro.modversion=SuperOSR-ST@-Nexus-0.0.0-AW \
-    ro.stats.romversion=0.0.0 \
-    ro.config.play.bootsound=0
-
-#PRODUCT_LOCALES := \
-#    es_ES \
-#    ca_ES \
-#    en_US \
-#    de_DE \
-#    eu_ES \
-#    fr_FR \
-#    it_IT \
-#    pt_PT \
-#    ru_RU \
-#    hdpi
-
-#PRODUCT_DEFAULT_LANGUAGE := es_ES
 
 PRODUCT_VERSION_MAINTENANCE := 9999
