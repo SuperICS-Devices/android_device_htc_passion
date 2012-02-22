@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_passion.mk
+    $(LOCAL_DIR)/team_passion.mk
